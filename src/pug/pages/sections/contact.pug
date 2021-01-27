@@ -1,0 +1,20 @@
+include ../mixins
+section.contact
+  span#contact
+  .container.inner
+    h2.contact__title.title Contact me
+    .row.row--center
+      .contact__item
+        .contact__img-wrapper
+          img.img(src=images + "photo.png" alt="Photo")
+      .contact__item
+        .contact__socials
+          .contact__socials-img-wrapper
+            a(href="https://github.com/armistrice" target="_blank")
+              img.img(src=images + "github.svg" alt="Github")
+          .contact__socials-img-wrapper
+            a(href="https://t.me/lapkinthegod" target="_blank")
+              img.img(src=images + "telegram.svg" alt="Telegram")
+        .contact__links
+          a.contact__mail(href="mailto:lapkinthegod@gmail.com") lapkinthegod@gmail.com
+          a.contact__tel(href="tel:+375336177128") +375 (33) 617-71-28

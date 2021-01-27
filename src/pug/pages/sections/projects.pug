@@ -1,0 +1,17 @@
+include ../mixins
+section.projects
+  span#projects
+  .container.inner
+    h2.projects__title.title Projects
+    .row.row
+      .projects__item
+        .projects__img-wrapper
+          img.img(src=images + "triphouse.png" alt="Triphouse")
+      .projects__item
+        .projects__button
+          button.projects__next Next project
+        p.projects__info-title Triphouse
+        p.projects__info-text Landing-page for online travel agency for lodging reservations.
+        a.button(href="https://github.com/armistrice/if-html" target="_blank") See on Github
+    +dotsSlider
+        

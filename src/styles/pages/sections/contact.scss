@@ -1,0 +1,65 @@
+@import "../mixins";
+.contact {
+  background: #fff;
+  position: relative;
+
+  & span {
+    position: absolute;
+    top: -100px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  .row--center {
+    @include align-center;
+  }
+
+  &__item {
+    margin-right: 213px;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+
+  &__img-wrapper {
+    width: 400px;
+    height: 400px;
+
+    & img {
+      border-radius: 50%;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    margin-bottom: 104px;
+
+    &-img-wrapper {
+      width: 60px;
+      height: 60px;
+      margin-right: 16px;
+
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mail {
+    text-decoration-line: underline;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+
+  &__tel {
+    color: #000000;
+  }
+}

@@ -1,0 +1,23 @@
+.education {
+  position: relative;
+  padding-bottom: 72px;
+
+  & span {
+    position: absolute;
+    top: -100px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 124px;
+    &::after {
+      content: "";
+      width: 1px;
+      height: 350px;
+      background: #3d3b3c;
+      position: absolute;
+      left: 50%;
+      top: 200%;
+    }
+  }
+}

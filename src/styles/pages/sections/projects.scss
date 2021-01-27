@@ -1,0 +1,80 @@
+@import "../mixins";
+.projects {
+  background: #fff;
+  position: relative;
+
+  & span {
+    position: absolute;
+    top: -100px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__item {
+    margin-right: 130px;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+
+  &__img-wrapper {
+    max-width: 603px;
+  }
+
+  &__button {
+    text-align: right;
+    margin-bottom: 60px;
+  }
+
+  &__next {
+    background: url("#{$img-path}arrow-right.svg") right no-repeat;
+    font-size: 16px;
+    padding-right: 20px;
+    line-height: 19px;
+    text-decoration-line: underline;
+    color: #3a4576;
+  }
+
+  &__info {
+    &-title {
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    &-text {
+      color: #bebebe;
+      margin-bottom: 72px;
+      max-width: 80%;
+    }
+  }
+
+  &__dots {
+    margin-top: 56px;
+  }
+
+  .dots-slider {
+    @include align-center;
+    &__item {
+      margin-right: 17px;
+
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+    }
+
+    &__button {
+      background: transparent;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 1px solid#d52362;
+
+      &--active {
+        background: #d52362;
+      }
+    }
+  }
+}

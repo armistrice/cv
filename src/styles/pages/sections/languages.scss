@@ -1,0 +1,29 @@
+@import "../mixins";
+.languages {
+  background: #fafafa;
+  position: relative;
+
+  & span {
+    position: absolute;
+    top: -100px;
+  }
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__img-wrapper {
+    margin-bottom: 24px;
+  }
+
+  &__info {
+    &-title {
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+  }
+}

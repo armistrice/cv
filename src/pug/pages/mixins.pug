@@ -1,5 +1,73 @@
 - var images = "../src/assets/images/"
+- var navigationValues = [{name: 'About', id: 'about'},{name: 'Skills', id:'skills'},{name: 'Experience', id:'experience'},{name: 'Projects', id:'projects'},{name: 'Education', id:'education'},{name: 'Languages', id:'languages'},{name: 'Contact me', id:'contact'}]
+- var skillsValues = [{img: 'html.svg', name: 'HTML 5', stars: '5-stars.svg'},{img: 'css.svg', name: 'CSS 3', stars: '5-stars.svg'},{img: 'sass.svg', name: 'SASS', stars: '4-stars.svg'},{img: 'git.svg', name: 'Git', stars: '3-stars.svg'},{img: 'js.svg', name: 'JavaScript', stars: '3-stars.svg'},{img: 'github.svg', name: 'Github', stars: '4-stars.svg'}]
+- var languagesValues = [{langImg: 'ru.svg', langName: 'Russian', langLevel: 'Native – C2'},{langImg: 'uk.svg', langName: 'English', langLevel: 'Intermediate – B1'},{langImg: 'de.svg', langName: 'German', langLevel: 'Elementary – A2'}]
 mixin headParameters
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title CV
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  title CV
+mixin headerNavigation(navigationValues)
+  ul.about__header-list
+    each value in navigationValues
+      li.about__header-list-item
+        a.about__header-list-link(href="#" + value.id)= value.name
+mixin skillsItems(skillsValues)
+  each value in skillsValues
+    .skills__item
+      .skills__img-wrapper
+        img.img(src=images + value.img alt=value.name)
+      p.skills__text.align-center=value.name
+      .rating
+        .rating__img-wrapper
+          img.img(src=images + value.stars  alt="Rating")
+- var experienceValues = [{date: 'May 2021 – till now', title: 'Freelance', subtitle: 'Front-end developer', text: 'Created microsites, landing pages for Upwork using HTML5,CSS and JS.'},{date: 'Aug 2019 – May 2021', title: 'Minsk gear plant', subtitle: 'Electrician', text: 'Maintained electrical equipment in good condition, ensured efficient and uninterrupted operation of service facilities.'}]
+- var educationValues = [{date: 'Nov 2020 – May 2021', title: 'IT School Intellect Fox', subtitle: 'Front-end developer course'},{date: 'Sep 2015 – Aug 2019', title: 'Minsk State Polytechnic College', subtitle: 'Installation and operation of electrical equipment'}]
+mixin lineBranch(experienceValues)
+  each value in experienceValues
+    if value.date === "May 2021 – till now"
+      .now
+        .dot.dot--active
+        p.date.date--active=value.date
+        .info
+          p.info-title=value.title
+          p.info-subtitle=value.subtitle
+          p.info-text=value.text
+    else
+      .before
+        .info
+          p.info-title=value.title
+          p.info-subtitle=value.subtitle
+          p.info-text=value.text
+        p.date=value.date
+        .dot
+mixin lineBranch1(educationValues)
+  each value in educationValues
+    if value.date === "Nov 2020 – May 2021"
+      .now
+        .dot.dot--active
+        p.date.date--active=value.date
+        .info
+          p.info-title=value.title
+          p.info-subtitle=value.subtitle
+    else
+      .before
+        .info
+          p.info-title=value.title
+          p.info-subtitle=value.subtitle
+        p.date=value.date
+        .dot
+mixin dotsSlider
+  ul.projects__dots.dots-slider
+    - for(x=0;x<4;x++)
+      li.dots-slider__item
+        if x === 0
+          button.dots-slider__button.dots-slider__button--active
+        else
+          button.dots-slider__button
+mixin languagesItem(languagesValues)
+  each value in languagesValues
+      .languages__item
+        .languages__img-wrapper
+          img.img(src=images + value.langImg alt=value.langName)
+        p.languages__info-title=value.langName
+        p.languages__info-text=value.langLevel
