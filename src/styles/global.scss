@@ -12,6 +12,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   color: #120d0e;
+  min-width: 360px;
 }
 
 ul {
@@ -40,7 +41,8 @@ button {
 }
 
 .inner {
-  padding: 72px 0;
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
 
 .title {
@@ -126,5 +128,163 @@ button {
     font-size: 16px;
     line-height: 19px;
     color: #bebebe;
+  }
+}
+
+// @media only screen and (max-width: 768px) {
+//   // For tablets
+//   .col-s-1 {
+//     width: 8.33%;
+//   }
+//   .col-s-2 {
+//     width: 16.66%;
+//   }
+//   .col-s-3 {
+//     width: 25%;
+//   }
+//   .col-s-4 {
+//     width: 33.33%;
+//   }
+//   .col-s-5 {
+//     width: 41.66%;
+//   }
+//   .col-s-6 {
+//     width: 50%;
+//   }
+//   .col-s-7 {
+//     width: 58.33%;
+//   }
+//   .col-s-8 {
+//     width: 66.66%;
+//   }
+//   .col-s-9 {
+//     width: 75%;
+//   }
+//   .col-s-10 {
+//     width: 83.33%;
+//   }
+//   .col-s-11 {
+//     width: 91.66%;
+//   }
+//   .col-s-12 {
+//     width: 100%;
+//   }
+
+//   body {
+//     font-size: 18px;
+//     line-height: 20px;
+//   }
+
+//   .container {
+//     max-width: 780px;
+//   }
+// }
+
+@media only screen and (max-width: 480px) {
+  // For mobile phones
+  .col-m-1 {
+    width: 8.33%;
+  }
+  .col-m-2 {
+    width: 16.66%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.33%;
+  }
+  .col-m-5 {
+    width: 41.66%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.33%;
+  }
+  .col-m-8 {
+    width: 66.66%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.33%;
+  }
+  .col-m-11 {
+    width: 91.66%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+
+  body {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .container {
+    max-width: 450px;
+  }
+
+  .inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .button {
+    height: 32px;
+  }
+
+  .row {
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .dot {
+    margin-left: 20%;
+    margin-bottom: 10px;
+
+    &--active {
+      margin-left: 75%;
+    }
+  }
+
+  .now,
+  .before {
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-left: 0;
+    align-items: unset;
+  }
+
+  .now {
+    margin-bottom: 0;
+    text-align: right;
+  }
+
+  .before {
+    margin-top: -22px;
+    text-align: left;
+  }
+
+  .date {
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+
+  .info {
+    max-width: 100%;
+
+    &-text {
+      margin-bottom: 10px;
+    }
   }
 }

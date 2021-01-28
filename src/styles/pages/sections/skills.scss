@@ -19,9 +19,8 @@
 
   &__img-wrapper {
     @include align-center;
-    width: 100px;
-    height: 100px;
     margin-bottom: 18px;
+    height: 100%;
   }
 
   &__text {
@@ -33,6 +32,10 @@
 
   .rating {
     margin-bottom: 70px;
+
+    &__img-wrapper {
+      margin: 0 auto;
+    }
   }
 
   .arrow-wrap {
@@ -43,5 +46,46 @@
     background: url("#{$img-path}arrow.svg") 0 0 no-repeat;
     width: 32px;
     height: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .skills {
+    & span {
+      top: -50px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      margin-bottom: 10px;
+    }
+
+    &__img-wrapper {
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      font-size: 8px;
+      line-height: 10px;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      margin-bottom: 20px;
+    }
+
+    .arrow-wrap {
+      position: absolute;
+      top: 50%;
+      left: 95%;
+      transform: translate(-50%, -50%);
+    }
+
+    .arrow {
+      transform: scale(0.5) rotate(270deg);
+    }
   }
 }

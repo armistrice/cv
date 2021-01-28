@@ -11,9 +11,13 @@ mixin headerNavigation(navigationValues)
     each value in navigationValues
       li.about__header-list-item
         a.about__header-list-link(href="#" + value.id)= value.name
+  .burger
+    .burger__line
+    .burger__line
+    .burger__line
 mixin skillsItems(skillsValues)
   each value in skillsValues
-    .skills__item
+    .skills__item.col-m-6
       .skills__img-wrapper
         img.img(src=images + value.img alt=value.name)
       p.skills__text.align-center=value.name
@@ -66,7 +70,7 @@ mixin dotsSlider
           button.dots-slider__button
 mixin languagesItem(languagesValues)
   each value in languagesValues
-      .languages__item
+      .languages__item.col-m-12
         .languages__img-wrapper
           img.img(src=images + value.langImg alt=value.langName)
         p.languages__info-title=value.langName

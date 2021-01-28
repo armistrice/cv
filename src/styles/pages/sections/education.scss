@@ -21,3 +21,21 @@
     }
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .education {
+    & span {
+      top: -50px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+
+      &::after {
+        top: -6px;
+        height: 300px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

@@ -27,3 +27,27 @@
     }
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .languages {
+    & span {
+      top: -50px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      margin-bottom: 22px;
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__img-wrapper {
+      margin-bottom: 12px;
+    }
+  }
+}

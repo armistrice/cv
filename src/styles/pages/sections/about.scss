@@ -1,8 +1,6 @@
 @import "../mixins";
 .about {
   background: #fff;
-  padding-top: 100px;
-  margin-top: -100px;
   position: relative;
 
   & span {
@@ -47,6 +45,10 @@
     }
   }
 
+  .burger {
+    display: none;
+  }
+
   &__content {
     margin: 180px 0 72px 0;
     @include align-center-between;
@@ -85,6 +87,74 @@
 
     &:hover {
       transform: scale(1.5);
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about {
+    & span {
+      top: -50px;
+    }
+
+    &__header {
+      width: 100%;
+      &::after {
+        margin-top: 20px;
+      }
+    }
+
+    &__header-list {
+      padding-top: 20px;
+      display: none;
+    }
+
+    .burger {
+      padding: 20px 0 0 40px;
+      display: block;
+
+      &__line {
+        width: 24px;
+        height: 3px;
+        background-color: #000;
+        margin-bottom: 4px;
+      }
+
+      &__line:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__content {
+      flex-wrap: wrap;
+      margin: 80px 0 32px 0;
+    }
+
+    &__title {
+      margin-bottom: 4px;
+    }
+
+    &__subtitle {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 10px;
+      max-width: 100%;
+
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__buttons {
+      margin-bottom: 30px;
+    }
+
+    &__photo:hover {
+      transform: none;
     }
   }
 }

@@ -25,9 +25,6 @@
   }
 
   &__img-wrapper {
-    width: 400px;
-    height: 400px;
-
     & img {
       border-radius: 50%;
     }
@@ -61,5 +58,32 @@
 
   &__tel {
     color: #000000;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .contact {
+    & span {
+      top: -50px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      margin-right: 0;
+      margin-bottom: 24px;
+      text-align: center;
+
+      &:nth-last-child(1) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__socials {
+      justify-content: center;
+      margin-bottom: 32px;
+    }
   }
 }
