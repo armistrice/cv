@@ -22,7 +22,7 @@ mixin skillsItems(skillsValues)
           img.img(src=images + value.stars  alt="Rating")
 - var experienceValues = [{date: 'May 2021 – till now', title: 'Freelance', subtitle: 'Front-end developer', text: 'Created microsites, landing pages for Upwork using HTML5,CSS and JS.'},{date: 'Aug 2019 – May 2021', title: 'Minsk gear plant', subtitle: 'Electrician', text: 'Maintained electrical equipment in good condition, ensured efficient and uninterrupted operation of service facilities.'}]
 - var educationValues = [{date: 'Nov 2020 – May 2021', title: 'IT School Intellect Fox', subtitle: 'Front-end developer course'},{date: 'Sep 2015 – Aug 2019', title: 'Minsk State Polytechnic College', subtitle: 'Installation and operation of electrical equipment'}]
-mixin lineBranch(experienceValues)
+mixin experienceLine(experienceValues)
   each value in experienceValues
     if value.date === "May 2021 – till now"
       .now
@@ -40,7 +40,7 @@ mixin lineBranch(experienceValues)
           p.info-text=value.text
         p.date=value.date
         .dot
-mixin lineBranch1(educationValues)
+mixin educationLine(educationValues)
   each value in educationValues
     if value.date === "Nov 2020 – May 2021"
       .now
